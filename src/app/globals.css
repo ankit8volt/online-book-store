@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 31, 41, 55;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white rounded-full py-2 px-6 font-medium hover:bg-orange-700 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary rounded-full py-2 px-6 font-medium hover:bg-orange-50 transition-colors;
+  }
+  
+  .category-card {
+    @apply p-6 rounded-xl flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform cursor-pointer;
+  }
+  
+  .book-card {
+    @apply bg-white rounded-xl shadow-custom overflow-hidden;
+  }
+} 
